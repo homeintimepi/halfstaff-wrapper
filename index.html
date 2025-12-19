@@ -2,60 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Half-Staff Flag Status</title>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Half-Staff Status</title>
   <style>
-    body {
-      margin: 0;
-      padding: 12px;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-items: start;
-    }
-
-    .widget {
-      border: 1px solid #ddd;
-      padding: 10px;
-      border-radius: 6px;
-    }
-
-    .widget-title {
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    /* Stack vertically on smaller screens */
-    @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    body { margin:0; padding:12px; font-family: Arial, sans-serif; }
+    .grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+    .card { border:1px solid #ddd; border-radius:6px; padding:10px; }
+    .title { font-weight:600; margin:0 0 8px 0; }
+    iframe { width:100%; height:320px; border:0; }
+    @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
   <div class="grid">
-
-    <!-- US Half-Staff -->
-    <div class="widget">
-      <div class="widget-title">United States – Half-Staff Status</div>
-      <script src="https://halfstaff.org/widgets/us-half-staff-flags.js"></script>
+    <div class="card">
+      <div class="title">United States – Half-Staff Status</div>
+      <iframe src="./us.html" loading="lazy"></iframe>
     </div>
-
-    <!-- Iowa Half-Staff -->
-    <div class="widget">
-      <div class="widget-title">Iowa – Half-Staff Status</div>
-      <script src="https://halfstaff.org/widgets/us-half-staff-flags.js?st=IA"></script>
+    <div class="card">
+      <div class="title">Iowa – Half-Staff Status</div>
+      <iframe src="./ia.html" loading="lazy"></iframe>
     </div>
-
   </div>
-
 </body>
 </html>
